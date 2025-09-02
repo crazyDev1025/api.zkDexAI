@@ -19,10 +19,10 @@ app.get('/currencies', async (req, res) => {
 });
 
 
-app.get('/tasklist', async (req, res) => {
+app.get('/quote', async (req, res) => {
 
   try {
-    const response = await fetch('https://fed-ledger-prod.flock.io/api/v1/tasks/list');
+    const response = await fetch('https://api2.zkexchange.org/quote');
     const data = await response.json();
     res.json(data);
   } catch (err) {
